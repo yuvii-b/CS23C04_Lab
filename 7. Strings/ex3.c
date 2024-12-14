@@ -5,7 +5,7 @@ int main(){
 	char word[100];
 	int vowels = 0, consonants = 0, spaces = 0;
 	printf("Enter a text: ");
-	fgets(word, 100, stdin);
+	fgets(word, sizeof(word), stdin);
 	for(int i = 0; word[i] != '\0'; i++){
 	       if(word[i] == ' ') spaces++;
 	       else{

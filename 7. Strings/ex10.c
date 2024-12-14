@@ -5,11 +5,12 @@ int main(){
 	int n;
 	printf("Enter the number of names: ");
 	scanf("%d", &n);
+	getchar();
 	char names[n][100], temp[100];
 	for(int i = 0; i < n; ++i){
 		printf("Enter name %d: ", i + 1);
-		scanf("%s", names[i]);
-		//fgets(names[i], 100, stdin);
+		// scanf("%s", names[i]);
+		fgets(names[i], sizeof(names), stdin);
 	}
 	for(int i = 0; i < n - 1; ++i){
 		for(int j = i + 1; j < n; ++j){
@@ -22,7 +23,7 @@ int main(){
 	}
 	printf("Alphabetical Order:\n");
 	for(int i = 0; i < n; ++i){
-		printf("%s ", names[i]);
+		printf("%s", names[i]);
 	}
 	return 0;
 	   

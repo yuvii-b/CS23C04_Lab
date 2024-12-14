@@ -1,16 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-#include <limits.h>
 
 int main(){
 	char string[100] = "abc largest word", curr[100] = "", small[100] = "";
-	int size = 100;
 	int j = 0;
 	printf("The text is: %s\n", string);
 	for(int i = 0; i < strlen(string); ++i){
 		if(string[i] != ' '){
-			curr[j] = string[i];
-	       		j++;		
+			curr[j++] = string[i];		
 		}else{
 			curr[j] = '\0';
 			j = 0;

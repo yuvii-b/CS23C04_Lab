@@ -2,7 +2,9 @@
 #include <string.h>
 
 int main(){
-	char word[] = "ProgramMING iS Fun", b[100];
+	char word[100], b[100];
+	printf("Enter a word: ");
+	fgets(word, sizeof(word), stdin);
 	printf("%s\n", word);
 	for(int i = 0; word[i] != '\0'; ++i){
 		if(word[i] >= 97 && word[i] <= 122)

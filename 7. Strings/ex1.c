@@ -2,45 +2,61 @@
 #include <string.h>
 
 int main(){
-	char str[] = "hello", str1[] = "world", word1[100], word2[100];
-	//strlen()
-	int count = 0;
-	for(int i = 0; str[i] != '\0'; ++i){
-		++count;
+	printf("With the help of string functions:\n");
+	char str1[100] = "Hello";
+	char str2[] = "World";
+	printf("String length: %d\n", strlen(str1));
+	strcpy(str1, str2);
+	printf("String copy: %s\n", str1);
+	strcat(str1, str2);
+	printf("String concatenation: %s\n", str1);
+	printf("String compare: %d\n", strcmp(str1, str2));
+	printf("String reverse: %s\n", strrev(str1)); // will not work in telnet's compiler
+	printf("Without the help of string functions:\n");
+	char str3[100] = "Hello";
+	char str4[] = "World";
+	//strlen
+	int length = 0;
+	while(str3[length] != '\0') length++;
+	printf("String length: %d\n", length);
+	//strcpy
+	int i = 0;
+	while(str4[i] != '\0'){
+		str3[i] = str4[i];
+		i++;
 	}
-	// strcpy()
-	for(int i = 0; str[i]!='\0'; ++i){
-		word1[i] = str[i];     
-	}	
-	strcpy(word2, str);
-	//strcat()
-	char w1[100] = "saravana";
-	char w2[100] = "kumar";
-	for(int i = strlen(w1) + 1; i < (strlen(w1) + strlen(w2)); i++){
-		int k = 0;
-		w1[i] = w2[k++];
+	str3[i] = '\0';
+	printf("String copy: %s\n", str3);
+	//strcat
+	int des = 0;
+	while(str3[des] != '\0') des++;
+	i = 0;
+	while(str4[i] != '\0'){
+		str3[des + i] = str4[i];
+		i++;
 	}
-	printf("%s\n", w1);
-	strcat(str, " ");
-        strcat(str, str1);	
-	//str reverse
-	printf("%s\n", str);
-	int i = 0, j = strlen(str) - 1;
-	while(i < j){
-	  char temp = str[j];
-	  str[j] = str[i];
-	  str[i] = temp;
-	  i++;
-	  j--;
-	}
+	str3[des + i] = '\0';
+	printf("String concatenation: %s\n", str3);
 	//strcmp
-  	int value = strcmp("hello", "hello");
-	printf("%d\n", value);	
-	printf("%s\n", str);
-	printf("Length without strlen function: %d\n", count);
-	printf("Length using strlen function: %d\n", strlen(str));
-	printf("string copy without using strcpy: %s\n", word1);
-	printf("string copy with strcpy: %s\n", word2);
-	printf("Concatenated string is %s\n", str);
+	i = 0;
+	int comp = 0;
+	while(str3[i] != '\0' && str4[i] != '\0'){
+		if(str3[i] != str4[i]){
+			comp = str3[i] - str4[i];
+			break;
+		}
+		i++;
+	}
+	if(comp == 0) comp = str3[i] - str4[i];
+	printf("String compare: %d\n", (comp>0) ? 1 : 0);
+	//strrev
+	int len = 0;
+	while(str3[len] != '\0') len++;
+	for(i = 0; i < len / 2; ++i){
+		char temp = str3[i];
+		str3[i] = str3[len - i - 1];
+		str3[len - i - 1] = temp;
+	}
+	printf("String reverse: %s\n", str3);
 	return 0;
 }
