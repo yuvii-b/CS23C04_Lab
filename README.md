@@ -1,4 +1,4 @@
-ye# CS23C04_Lab
+# CS23C04_Lab
 
 This repository contains the C programs completed during the first-semester lab sessions as part of the **CS23C04 course**. These programs demonstrate fundamental programming concepts and problem-solving techniques in C.
 
