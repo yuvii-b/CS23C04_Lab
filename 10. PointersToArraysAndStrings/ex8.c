@@ -8,6 +8,7 @@ void str_cat(char *str1, char *str2){
         str1++;
         str2++;
     }
+    *str1 = '\0';
 }
 
 int main(){
