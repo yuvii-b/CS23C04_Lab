@@ -1,4 +1,4 @@
-# CS23C04_Lab
+ye# CS23C04_Lab
 
 This repository contains the C programs completed during the first-semester lab sessions as part of the **CS23C04 course**. These programs demonstrate fundamental programming concepts and problem-solving techniques in C.
 
@@ -51,11 +51,5 @@ You can check the individual program files in the repository for more details.
    ```
 
 Ensure you have a C compiler like GCC installed on your system.
-
-## License
-
-This project is open-source and available under the MIT License. Feel free to use the programs for learning purposes.
-
----
 
 ⭐ **Star this repository if you find it helpful or interesting!** ⭐
