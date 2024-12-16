@@ -11,7 +11,7 @@ int main(){
 	int cx, cy, px, py;
 	float Radius, circum, Area;
 	printf("Enter the (x, y) coords of circle center: ");
-	scanf("%d, %d", &cx, &cy);
+	scanf("%d %d", &cx, &cy);
 	printf("Enter the point coords (px, py): ");
 	scanf("%d %d", &px, &py);
 	Radius = radius(cx, cy, px, py);
