@@ -7,7 +7,6 @@ This repository contains the C programs completed during the first-semester lab 
 - [About](#about)
 - [Programs](#programs)
 - [How to Run](#how-to-run)
-- [License](#license)
 
 ## About
 
