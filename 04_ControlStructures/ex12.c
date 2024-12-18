@@ -1,4 +1,12 @@
-// Tax payable calculation
+//  Write a C program for the following scenario, If Gender of the employee is Male the 
+following conditions apply for Tax Payable calculation: 
+Up to Rs 1 Lakh of Net Salary – No Tax 
+Net salary > 1 Lakh – 10% 
+If Gender of the employee is Female the following conditions apply for Tax Payable 
+calculation: Up to Rs 1.35 Lakh of Net Salary – No Tax 
+Net salary > 1.35 Lakh – 10% Tax using nested if. 
+Accept gender as character (m or f)
+
 #include <stdio.h>
 int main(){
   int salary;
