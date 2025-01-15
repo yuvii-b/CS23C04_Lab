@@ -1,17 +1,15 @@
- #include <stdio.h>
-#include <math.h>
-
+#include<stdio.h>
+#include<math.h>
 int main(){
-	long int dec, bin, temp, i = 0;
-	printf("Enter a decimal number: ");
-	scanf("%ld", &dec);
-	temp = dec;
-	do{
-		int l = temp % 2;
-		bin += l * pow(10, i);
-		++i;
-		temp /= 2;
-	}while(temp!=0);
-	printf("%ld in binary is %d\n", dec, bin);
-	return 0;
+    long int bin=0,dec,temp,d=0;
+    printf("Enter a number in decimal form:");
+    scanf("%ld",&dec);
+    temp =dec;
+   do {
+        int c = dec % 2;
+         bin= bin + c*pow(10,d);
+         dec = dec / 2;
+         d++;
+    }while(dec != 0);
+    printf("Binary equivalent of %ld is %ld ",temp,bin);
 }
