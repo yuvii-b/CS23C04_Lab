@@ -47,8 +47,8 @@ int main(){
 		}
 		i++;
 	}
-	if(comp == 0) comp = str3[i] - str4[i];
-	printf("String compare: %d\n", (comp>0) ? 1 : 0);
+	 comp = str3[i] - str4[i];
+	printf("String compare: %d\n",comp);
 	//strrev
 	int len = 0;
 	while(str3[len] != '\0') len++;
