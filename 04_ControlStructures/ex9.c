@@ -25,7 +25,7 @@ int main(){
 	 printf("\nRoot 1: %.2f + %.2fi", r1, imag);
 	 printf("\nRoot 2: %.2f - %.2fi\n", r1, imag);
  }else{
-         int r1 = 0, r2 = 0;
+         int r1 = (-1 * b) / (2 * a), r2 = r1;
 	 printf("\nRoot 1: %d", r1);
 	 printf("\nRoot 2: %d\n", r2);
  }
